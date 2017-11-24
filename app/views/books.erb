@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Books Conquered</title>
+    </head>
+    <body>
+      <div>
+        <h3>Season 1</h3>
+
+        <% AdminsAndBooks::BOOKS[:season_1].each_with_index do |book, index| %>
+          <p><%= index + 1 %>: <%= book %></p>
+        <% end %>
+      </div>
+
+      <div>
+        <h3>Season 2</h3>
+
+        <% AdminsAndBooks::BOOKS[:season_2].each_with_index do |book, index| %>
+          <p><%= index + 1 %>: <%= book %></p>
+        <% end %>
+      </div>
+
+      <div>
+        <h3>Season 3</h3>
+
+        <% AdminsAndBooks::BOOKS[:season_3].each_with_index do |book, index| %>
+          <p><%= index + 1 %>: <%= book %></p>
+        <% end %>
+      </div>
+
+    </body>
+</html>
