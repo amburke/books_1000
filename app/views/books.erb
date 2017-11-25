@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Books Conquered</title>
+        <title>Books</title>
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
     </head>
     <body>
-      <div>
+      <div class="season">
         <h3>Season 1</h3>
 
         <% AdminsAndBooks::BOOKS[:season_1].each_with_index do |book, index| %>
@@ -12,7 +14,7 @@
         <% end %>
       </div>
 
-      <div>
+      <div class="season">
         <h3>Season 2</h3>
 
         <% AdminsAndBooks::BOOKS[:season_2].each_with_index do |book, index| %>
@@ -20,7 +22,7 @@
         <% end %>
       </div>
 
-      <div>
+      <div class="season">
         <h3>Season 3</h3>
 
         <% AdminsAndBooks::BOOKS[:season_3].each_with_index do |book, index| %>
