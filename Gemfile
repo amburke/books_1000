@@ -1,6 +1,8 @@
 source "https://rubygems.org"
+ruby "2.3.3"
 
 gem "sinatra"
+gem "bookfinder"
 gem "activerecord", :require => "active_record"
 gem "sinatra-activerecord", :require => "sinatra/activerecord"
 gem "require_all" #=> Helps to load dependencies
