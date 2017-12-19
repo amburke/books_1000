@@ -18,7 +18,7 @@ class AdminsAndBooks
   BOOKS = {
     season_1: [
       "Cat's Cradle",
-      "Henry Ford",
+      "I Invented The Modern Age",
       "Under The Skin",
       "How Music Works",
       "Dream Team",
