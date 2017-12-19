@@ -10,7 +10,7 @@
         <h3>Season 1</h3>
 
         <% AdminsAndBooks::BOOKS[:season_1].each_with_index do |book, index| %>
-          <p><%= index + 1 %>: <%= book %></p>
+          <p><%= index + 1 %>: <a style="text-decoration: none" href="/book/<%= book %>"><%= book %></a></p>
         <% end %>
       </div>
 
@@ -18,7 +18,7 @@
         <h3>Season 2</h3>
 
         <% AdminsAndBooks::BOOKS[:season_2].each_with_index do |book, index| %>
-          <p><%= index + 1 %>: <%= book %></p>
+          <p><%= index + 1 %>: <a style="text-decoration: none" href="/book/<%= book %>"><%= book %></a></p>
         <% end %>
       </div>
 
@@ -26,7 +26,7 @@
         <h3>Season 3</h3>
 
         <% AdminsAndBooks::BOOKS[:season_3].each_with_index do |book, index| %>
-          <p><%= index + 1 %>: <%= book %></p>
+          <p><%= index + 1 %>: <a style="text-decoration: none" href="/book/<%= book %>"><%= book %></a></p>
         <% end %>
       </div>
 

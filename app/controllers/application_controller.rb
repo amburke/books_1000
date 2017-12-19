@@ -10,4 +10,11 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :books
   end
+
+  get '/book/:name' do
+    bookfinder_client = BookFinder::Client.new
+    @book = bookfinder_client.books(params["name"]).first
+
+    erb :book
+  end
 end
