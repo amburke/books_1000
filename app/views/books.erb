@@ -6,28 +6,49 @@
         <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
     </head>
     <body>
+      <nav>
+        <div class="heading">
+          <ul>
+            <li><a href="">Seasons</a></li>
+            <li><a href="">Members</a></li>
+            <li><a href="">Search</a></li>
+          </ul>
+        </div>
+      </nav>
+
       <div class="season">
+        <div class="heading-line-left"></div>
+        <div class="heading-line-right"></div>
         <h3>Season 1</h3>
-
-        <% AdminsAndBooks::BOOKS[:season_1].each_with_index do |book, index| %>
-          <p><%= index + 1 %>: <a style="text-decoration: none" href="/book/<%= book %>"><%= book %></a></p>
-        <% end %>
+        <div>
+          <% AdminsAndBooks::BOOKS[:season_1].each_with_index do |book, index| %>
+            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book %>"><%= book %></a></p>
+          <% end %>
+        </div>
       </div>
 
       <div class="season">
-        <h3>Season 2</h3>
-
-        <% AdminsAndBooks::BOOKS[:season_2].each_with_index do |book, index| %>
-          <p><%= index + 1 %>: <a style="text-decoration: none" href="/book/<%= book %>"><%= book %></a></p>
-        <% end %>
+        <div class="heading-lines">
+          <div class="heading-line-left"></div>
+          <div class="heading-line-right"></div>
+          <h3 class="season-title">Season 2</h3>
+        </div>
+        <div>
+          <% AdminsAndBooks::BOOKS[:season_2].each_with_index do |book, index| %>
+            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book %>"><%= book %></a></p>
+          <% end %>
+        </div>
       </div>
 
       <div class="season">
+        <div class="heading-line-left"></div>
+        <div class="heading-line-right"></div>
         <h3>Season 3</h3>
-
-        <% AdminsAndBooks::BOOKS[:season_3].each_with_index do |book, index| %>
-          <p><%= index + 1 %>: <a style="text-decoration: none" href="/book/<%= book %>"><%= book %></a></p>
-        <% end %>
+        <div>
+          <% AdminsAndBooks::BOOKS[:season_3].each_with_index do |book, index| %>
+            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book %>"><%= book %></a></p>
+          <% end %>
+        </div>
       </div>
 
     </body>

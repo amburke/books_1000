@@ -1,7 +1,73 @@
 .body {
   background: linear-gradient(to top, #F9FAFB 0%, #FFFFFF 100%);
 }
+
+.heading {
+  font-family: 'Slabo 27px', serif;
+  border-style: none none solid none;
+  border-color: #dfdfdf;
+  border-width: 1px;
+}
+
+.heading-line-left {
+  border-style: solid;
+  border-color: #dfdfdf;
+  border-width: 1px;
+  width: 50px;
+  margin-left: 620px;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.heading-line-right {
+  border-style: solid dotted solid dotted;
+  border-color: #dfdfdf;
+  border-width: 1px;
+  width: 50px;
+  z-index: 9999;
+  margin-bottom: 0px;
+  margin-left: 752px;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.heading-lines {
+  display: inline;
+  /* position: absolute; */
+}
+
 .season {
   font-family: 'Slabo 27px', serif;
   text-align: center;
+  color: #4b4b4b;
+}
+
+.season-title {
+  margin-top: 0px;
+}
+
+.book-link {
+  text-decoration: none;
+  text-decoration-color: none;
+  color: #4b4b4b;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-decoration-color: none;
+  color: #4b4b4b;
 }
