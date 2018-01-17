@@ -11,6 +11,18 @@ class ApplicationController < Sinatra::Base
     erb :books
   end
 
+  get '/seasons' do
+    erb :books
+  end
+
+  get '/members' do
+    erb :members
+  end
+
+  get '/member_refresh' do
+    erb :member_refresh
+  end
+
   get '/book/:name' do
     bookfinder_client = BookFinder::Client.new
     @book = bookfinder_client.books(params["name"]).first

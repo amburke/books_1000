@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Members</title>
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
+        <meta http-equiv="refresh" content="10; url=http://127.0.0.1:9393/members" />
+    </head>
+    <body>
+      <nav>
+        <div class="heading">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/seasons">Seasons</a></li>
+            <li><a href="/members">Members</a></li>
+            <li><a href="">Search</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="season">
+        <h3>Countdown</h3>
+        <script>
+          var timeleft = 10;
+          var downloadTimer = setInterval(function(){
+            document.getElementById("progressBar").value = 10 - --timeleft;
+          },1000);
+        </script>
+        <progress value="0" max="10" id="progressBar"></progress>
+      </div>
+
+    </body>
+</html>

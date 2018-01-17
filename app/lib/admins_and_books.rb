@@ -10,9 +10,24 @@ class AdminsAndBooks
     Greg
     Leland
     Michael
-    Nick Spagnola
-    Nick Castello
+    Spagnola
+    Nick
     Scott
+  ]
+
+  SEASON_FOUR_ORDER = %w[
+    Aaron
+    Danny
+    COD
+    Scott
+    Nick
+    Chris
+    Michael
+    Spagnola
+    Leland
+    Chops
+    Greg
+    Alex
   ]
 
   BOOKS = {
