@@ -71,4 +71,26 @@ class AdminsAndBooks
     ]
   }
 
+  def self.seed(persist: false)
+    all_books = Book.all
+    seasons = BOOKS.keys
+
+    seasons.each do |season|
+      BOOKS[season].each do |title|
+        season_number = season.to_s.last.to_i
+        existing_book = all_books.find_by(title: title)
+
+        if persist
+          if existing_book.present?
+            existing_book.update!(season: season_number)
+          else
+            Book.create(title: title, season: season_number)
+          end
+        else
+          print [season_number, title]
+        end
+      end
+    end
+  end
+
 end
