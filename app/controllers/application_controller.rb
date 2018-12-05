@@ -20,16 +20,20 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/add_book' do
-    bookfinder_client = BookFinder::Client.new
-    @book = bookfinder_client.books(params["title"]).first
-
-    Book.create(
+    @book = Book.create(
       title: params["title"],
       author: params["author"],
       season: params["season"]
     )
 
     erb :book
+  end
+
+  post '/remove_book' do
+    book = Book.find_by(title: params["title"])
+    book.destroy! if book.present?
+
+    erb :books
   end
 
   get '/members' do
@@ -41,8 +45,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/book/:name' do
-    bookfinder_client = BookFinder::Client.new
-    @book = bookfinder_client.books(params["name"]).first
+    @show_removal = params["remove"] == "true" ? true : false
+    @book = Book.find_by(title: params["name"])
 
     erb :book
   end
