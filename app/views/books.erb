@@ -20,7 +20,7 @@
         <h3>-Season 1-</h3>
         <div>
           <% Book.season(number: 1).each_with_index do |book, index| %>
-            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book %>"><%= book.title %></a></p>
+            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
           <% end %>
         </div>
       </div>
@@ -31,7 +31,7 @@
         </div>
         <div>
           <% Book.season(number: 2).each_with_index do |book, index| %>
-            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book %>"><%= book.title %></a></p>
+            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
           <% end %>
         </div>
       </div>
@@ -40,7 +40,7 @@
         <h3>-Season 3-</h3>
         <div>
           <% Book.season(number: 3).each_with_index do |book, index| %>
-            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book %>"><%= book.title %></a></p>
+            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
           <% end %>
         </div>
       </div>

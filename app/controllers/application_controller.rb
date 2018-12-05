@@ -15,6 +15,23 @@ class ApplicationController < Sinatra::Base
     erb :books
   end
 
+  get '/add_book' do
+    erb :add_book
+  end
+
+  post '/add_book' do
+    bookfinder_client = BookFinder::Client.new
+    @book = bookfinder_client.books(params["title"]).first
+
+    Book.create(
+      title: params["title"],
+      author: params["author"],
+      season: params["season"]
+    )
+
+    erb :book
+  end
+
   get '/members' do
     erb :members
   end
