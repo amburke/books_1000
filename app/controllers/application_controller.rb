@@ -40,6 +40,15 @@ class ApplicationController < Sinatra::Base
     erb :members
   end
 
+  get '/current_season' do
+    @current_picker = AdminsAndBooks.current_picker
+    @up_next = AdminsAndBooks.up_next
+    @already_picked = AdminsAndBooks.already_picked
+    @left_to_pick = AdminsAndBooks.left_to_pick
+
+    erb :current_season
+  end
+
   get '/member_refresh' do
     erb :member_refresh
   end

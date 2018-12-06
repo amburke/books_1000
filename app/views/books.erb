@@ -11,39 +11,23 @@
           <ul>
             <li></li>
             <li><a href="/seasons">Seasons</a></li>
-            <li><a href="/members">Lineup</a></li>
+            <li><a href="/members">Members</a></li>
           </ul>
         </div>
       </nav>
 
-      <div class="season">
-        <h3>-Season 1-</h3>
-        <div>
-          <% Book.season(number: 1).each_with_index do |book, index| %>
-            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
-          <% end %>
+      <% Book.each_season.map do |season_number| %>
+        <div class="season">
+          <div class="heading-lines">
+            <h3 class="season-title">-Season <%= season_number %>-</h3>
+          </div>
+          <div>
+            <% Book.season(number: season_number).each_with_index do |book, index| %>
+              <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
+            <% end %>
+          </div>
         </div>
-      </div>
-
-      <div class="season">
-        <div class="heading-lines">
-          <h3 class="season-title">-Season 2-</h3>
-        </div>
-        <div>
-          <% Book.season(number: 2).each_with_index do |book, index| %>
-            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="season">
-        <h3>-Season 3-</h3>
-        <div>
-          <% Book.season(number: 3).each_with_index do |book, index| %>
-            <p><%= index + 1 %>: <a class="book-link" href="/book/<%= book.title %>"><%= book.title %></a></p>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
 
     </body>
 </html>

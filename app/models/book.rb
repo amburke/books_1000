@@ -4,6 +4,10 @@ class Book < ActiveRecord::Base
     Book.where(season: number)
   end
 
+  def self.each_season
+    Book.all.map(&:season).uniq
+  end
+
   def author_with_fallback
     return author if author.present?
 
