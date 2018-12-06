@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 ruby "2.3.3"
 
-gem "sinatra"
+gem "sinatra", ">= 2.0.2"
 gem "bookfinder"
 gem "activerecord", :require => "active_record"
 gem "sinatra-activerecord", :require => "sinatra/activerecord"
