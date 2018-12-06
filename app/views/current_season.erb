@@ -17,21 +17,22 @@
       </nav>
 
       <div class="season">
-        <h3><%= @book.title %></h3>
-
-        <h4><%= @book.author_with_fallback %></h4>
-
-        <p><%= @book.description %></p>
-
-        <p>season: <%= @book.season %></p>
+        <h3>Current organizer:</h3> <p><%= @current_picker %></p>
       </div>
 
       <div class="season">
-        <% if @show_removal %>
-          <form action="/remove_book" method="POST">
-            <input name="title" value="<%= @book.title %>" type="hidden">
-            <button type="submit" class="btn">Remove</button>
-          </form>
+        <h3>Up next:</h3> <p><%= @up_next %></p>
+      </div>
+
+      <div class="season">
+        <h3>Organizers left:</h3> <% @left_to_pick.map do |name| %>
+          <p><%= name %></p>
+        <% end %>
+      </div>
+
+      <div class="season">
+        <h3>Past organizers:</h3> <% @already_picked.map do |name| %>
+          <p><%= name %></p>
         <% end %>
       </div>
     </body>
