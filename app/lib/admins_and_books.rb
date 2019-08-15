@@ -123,4 +123,10 @@ class AdminsAndBooks
     end
   end
 
+  def self.seed_members
+    ADMINS.each do |name|
+      Member.create(name: name)
+    end
+  end
+
 end
