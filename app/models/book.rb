@@ -18,6 +18,14 @@ class Book < ActiveRecord::Base
     fetch_book_details.description
   end
 
+  def small_image
+    fetch_book_details.image_urls["smallThumbnail"]
+  end
+
+  def big_image
+    fetch_book_details.image_urls["thumbnail"]
+  end
+
   private def fetch_book_details
     bookfinder_client.books(title).first
   end
